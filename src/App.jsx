@@ -6,7 +6,7 @@ const App = () => {
   const [desserts, setDesserts] = useState([])
 
   useEffect(()=>{
-    fetch("https://p45tcbzb-9000.euw.devtunnels.ms/data.json")
+    fetch("data.json")
     .then(res => res.json())
     .then(data => setDesserts(data)
     )
