@@ -20,11 +20,11 @@ const AddToCartBtn = () => {
             <i className="fa-solid fa-cart-plus"></i>
             Add to Cart
         </div>
-    :    
+    : 
         <div className={styles.addBtn + " " + styles.selected}>
-            <button onClick={decrease}><i class="fa-solid fa-minus"></i></button>
+            <button onClick={decrease}><i className="fa-solid fa-minus"></i></button>
             {pieceNum}
-            <button onClick={increase}><i class="fa-solid fa-plus"></i></button>
+            <button onClick={increase}><i className="fa-solid fa-plus"></i></button>
         </div>
     }
     </>

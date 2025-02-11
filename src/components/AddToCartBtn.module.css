@@ -4,9 +4,10 @@
 
 .addBtn{   
     --height: 50px;
-    
+    margin: auto;
+    margin-top: calc(var(--height) / 2 * -1);
     cursor: pointer;
-
+    background-color: white;
     border: 1px solid var(--myRed);
     width: 200px;
     height: var(--height);

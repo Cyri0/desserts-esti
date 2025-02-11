@@ -9,4 +9,14 @@ body{
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  >div>div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
