@@ -1,0 +1,48 @@
+:root{
+    --myRed: hsl(14, 86%, 42%);
+}
+
+.addBtn{   
+    --height: 50px;
+    
+    cursor: pointer;
+
+    border: 1px solid var(--myRed);
+    width: 200px;
+    height: var(--height);
+    border-radius: calc(var(--height) / 2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    i{
+        color: var(--myRed);
+        margin-right: 5px;
+    }
+}
+
+.selected{
+    background-color: var(--myRed);
+
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+
+    button{
+        aspect-ratio: 1 / 1;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            color: white;
+            margin: auto;
+        }
+        cursor: pointer;
+    }
+}
