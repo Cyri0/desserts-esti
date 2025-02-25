@@ -1,13 +1,32 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from "./AddToCartBtn.module.css"
+import { CartContext } from '../App'
 
-const AddToCartBtn = () => {
+const AddToCartBtn = (props) => {
   
   const[pieceNum, setPieceNum] = useState(0)
-  
+  const{cart, setCart} = useContext(CartContext)
+
+  useEffect(()=>{
+    const dessert = {
+      name: props.name,
+      category: props.category,
+      price: props.price,
+      amount: pieceNum
+    }
+
+    const updatedCart = cart.filter(c => c.name !== props.name) // kiszedi, ha benne van
+    if (pieceNum > 0) {
+      updatedCart.push(dessert)// visszarakja, ha több mint 0 a pieceNum
+    }
+    setCart(updatedCart)
+
+  },[pieceNum])
+
   const increase = () => {
     setPieceNum(pieceNum + 1)
   }
+
   const decrease = () => {
     setPieceNum(pieceNum - 1)
   }
